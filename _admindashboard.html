@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<style>
+body{font-family:Arial;background:#f1f1f1;padding:20px;}
+table{width:100%;border-collapse:collapse;}
+td,th{border:1px solid #ccc;padding:8px;}
+</style>
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+
+<form method="post">
+<input name="student" placeholder="Student Username" required>
+<input name="title" placeholder="Task Title" required>
+<input type="date" name="due" required>
+<button>Add Task</button>
+</form>
+
+<table>
+<tr><th>Student</th><th>Task</th><th>Due</th><th>Status</th></tr>
+{% for t in tasks %}
+<tr>
+<td>{{t.student}}</td>
+<td>{{t.title}}</td>
+<td>{{t.due_date}}</td>
+<td>{{t.status}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>
