@@ -10,7 +10,7 @@ def get_db():
     return pymysql.connect(
         host="127.0.0.1",
         user="root",
-        password="Pranav@2000",
+        password="your_password",
         database="information",
         port=3306,
         cursorclass=pymysql.cursors.DictCursor,
@@ -134,3 +134,4 @@ def logout():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
